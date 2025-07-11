@@ -15,7 +15,6 @@ rm(list=ls())
 
 #loading libraries
 
-=======
 library(janitor)
 library(readxl)
 library(questionr)
@@ -51,9 +50,8 @@ library(dplyr)
 ```{r}
 inpath<-"D:/r git projects/ox-R/final essay/UKHLS n BHPS stata/UKDA-6614-stata/stata/stata13_se/"
 missval <- c(-9, -8, -7, -2, -1)
-#data================================================
+#data
 
-=======
 #housepriceindexes
 house_price<-read_excel("D:/r git projects/ox-R/final essay/UKHLS n BHPS stata/UKDA-6614-stata/stata/stata13_se/ukhousepriceindexmonthlypricestatistics.xlsx",sheet ="2")
 house_price<-as.data.frame(house_price)
@@ -68,7 +66,6 @@ a_indresp<-a_indresp%>%dplyr::select(pidp, a_hidp, a_mastat_dv,
          a_age_dv, a_sex_dv, a_hiqual_dv,
 
          a_mastat_dv, a_racel_dv,a_fimnnet_dv,a_nchild_dv,a_urban_dv,a_gor_dv,a_jbstat,a_sf1,a_susp,a_strata,a_psu)
-=======
          a_mastat_dv, a_racel_dv,a_fimnnet_dv,a_nchild_dv,a_urban_dv,a_gor_dv,a_jbstat,a_sf1,a_susp,a_strata,a_psu,a_month)
 
 
@@ -78,7 +75,6 @@ b_indresp<-b_indresp%>%dplyr::select(pidp, b_hidp, b_mastat_dv,
          b_age_dv, b_sex_dv, b_hiqual_dv,
 
          b_mastat_dv, b_racel_dv,b_fimnnet_dv,b_nchild_dv,b_urban_dv,b_gor_dv,b_jbstat,b_sf1,b_scsf1,b_susp,b_strata,b_psu)
-=======
          b_mastat_dv, b_racel_dv,b_fimnnet_dv,b_nchild_dv,b_urban_dv,b_gor_dv,b_jbstat,b_sf1,b_scsf1,b_susp,b_strata,b_psu,b_month)
 
 
@@ -88,7 +84,6 @@ c_indresp<-c_indresp%>%dplyr::select(pidp, c_hidp, c_mastat_dv,
          c_age_dv, c_sex_dv, c_hiqual_dv,
 
          c_mastat_dv, c_racel_dv,c_fimnnet_dv,c_nchild_dv,c_urban_dv,c_gor_dv,c_jbstat,c_sf1,c_scsf1,c_susp,c_strata,c_psu)
-=======
          c_mastat_dv, c_racel_dv,c_fimnnet_dv,c_nchild_dv,c_urban_dv,c_gor_dv,c_jbstat,c_sf1,c_scsf1,c_susp,c_strata,c_psu,c_month)
 
 
@@ -98,7 +93,6 @@ d_indresp<-d_indresp%>%dplyr::select(pidp, d_hidp, d_mastat_dv,
          d_age_dv, d_sex_dv, d_hiqual_dv,
 
          d_mastat_dv, d_racel_dv,d_fimnnet_dv,d_nchild_dv,d_urban_dv,d_gor_dv,d_jbstat,d_sf1,d_scsf1,d_susp,d_strata,d_psu)
-=======
          d_mastat_dv, d_racel_dv,d_fimnnet_dv,d_nchild_dv,d_urban_dv,d_gor_dv,d_jbstat,d_sf1,d_scsf1,d_susp,d_strata,d_psu,d_month)
 
 
@@ -108,7 +102,6 @@ e_indresp<-e_indresp%>%dplyr::select(pidp, e_hidp, e_mastat_dv,
          e_age_dv, e_sex_dv, e_hiqual_dv,
 
          e_mastat_dv, e_racel_dv,e_fimnnet_dv,e_nchild_dv,e_urban_dv,e_gor_dv,e_jbstat,e_sf1,e_scsf1,e_susp,e_strata,e_psu)
-=======
          e_mastat_dv, e_racel_dv,e_fimnnet_dv,e_nchild_dv,e_urban_dv,e_gor_dv,e_jbstat,e_sf1,e_scsf1,e_susp,e_strata,e_psu,e_month)
 
 
@@ -118,7 +111,7 @@ f_indresp<-f_indresp%>%dplyr::select(pidp, f_hidp, f_mastat_dv,
          f_age_dv, f_sex_dv, f_hiqual_dv,
 
          f_mastat_dv, f_racel_dv,f_fimnnet_dv,f_nchild_dv,f_urban_dv,f_gor_dv,f_jbstat,f_sf1,f_scsf1,f_susp,f_strata,f_psu,f_indscub_lw)
-=======
+
          f_mastat_dv, f_racel_dv,f_fimnnet_dv,f_nchild_dv,f_urban_dv,f_gor_dv,f_jbstat,f_sf1,f_scsf1,f_susp,f_strata,f_psu,f_indscub_lw,f_month)
 
 
@@ -128,11 +121,11 @@ g_indresp<-g_indresp%>%dplyr::select(pidp, g_hidp, g_mastat_dv,
          g_age_dv, g_sex_dv, g_hiqual_dv,
 
          g_mastat_dv, g_racel_dv,g_fimnnet_dv,g_nchild_dv,g_urban_dv,g_gor_dv,g_jbstat,g_sf1,g_scsf1,g_susp,g_indscui_lw,g_strata,g_psu)
-=======
+
          g_mastat_dv, g_racel_dv,g_fimnnet_dv,g_nchild_dv,g_urban_dv,g_gor_dv,g_jbstat,g_sf1,g_scsf1,g_susp,g_indscui_lw,g_strata,g_psu,g_month)
 
 
-#egoalt================================================
+#egoalt======
 a_egoalt<-read_dta(file=paste0(inpath, "ukhls/a_egoalt.dta")) 
 
 b_egoalt<-read_dta(file=paste0(inpath, "ukhls/b_egoalt.dta")) 
@@ -147,7 +140,7 @@ f_egoalt<-read_dta(file=paste0(inpath, "ukhls/f_egoalt.dta"))
 
 g_egoalt<-read_dta(file=paste0(inpath, "ukhls/g_egoalt.dta")) 
 
-#hhresp================================================
+#hhresp======
 a_hhresp<-read_dta(file=paste0(inpath, "ukhls/a_hhresp.dta"))  %>%
  dplyr::select(a_hidp,a_tenure_dv,a_ivfho)
 
@@ -169,7 +162,7 @@ f_hhresp<-read_dta(file=paste0(inpath, "ukhls/f_hhresp.dta"))  %>%
 g_hhresp<-read_dta(file=paste0(inpath, "ukhls/g_hhresp.dta"))  %>%
  dplyr::select(g_hidp,g_tenure_dv,g_ivfho)
 
-##emboost(hhsamp)===========================================
+##emboost(hhsamp)=
 a_hhsamp<-read_dta(file=paste0(inpath, "ukhls/a_hhsamp.dta"))  %>%
  dplyr::select(a_hidp,a_emboost)
 b_hhsamp<-read_dta(file=paste0(inpath, "ukhls/b_hhsamp.dta"))  %>%
@@ -196,7 +189,7 @@ h_indresp<-h_indresp%>%dplyr::select(pidp, h_hidp, h_mastat_dv,
          h_age_dv, h_sex_dv, h_hiqual_dv,
 
          h_mastat_dv, h_racel_dv,h_fimnnet_dv,h_nchild_dv,h_urban_dv,h_gor_dv,h_jbstat,h_sf1,h_scsf1,h_susp,h_strata,h_psu)
-=======
+
          h_mastat_dv, h_racel_dv,h_fimnnet_dv,h_nchild_dv,h_urban_dv,h_gor_dv,h_jbstat,h_sf1,h_scsf1,h_susp,h_strata,h_psu,h_month)
 
 
@@ -208,7 +201,7 @@ i_indresp<-i_indresp%>%dplyr::select(pidp, i_hidp, i_mastat_dv,
          i_age_dv, i_sex_dv, i_hiqual_dv,
 
          i_mastat_dv, i_racel_dv,i_fimnnet_dv,i_nchild_dv,i_urban_dv,i_gor_dv,i_jbstat,i_sf1,i_scsf1,i_susp,i_strata,i_psu,i_indscui_lw)
-=======
+
          i_mastat_dv, i_racel_dv,i_fimnnet_dv,i_nchild_dv,i_urban_dv,i_gor_dv,i_jbstat,i_sf1,i_scsf1,i_susp,i_strata,i_psu,i_indscui_lw,i_month)
 
 
@@ -218,7 +211,7 @@ j_indresp<-j_indresp%>%dplyr::select(pidp, j_hidp, j_mastat_dv,
          j_age_dv, j_sex_dv, j_hiqual_dv,
 
          j_mastat_dv, j_racel_dv,j_fimnnet_dv,j_nchild_dv,j_urban_dv,j_gor_dv,j_jbstat,j_sf1,j_scsf1,j_susp,j_strata,j_psu)
-=======
+
          j_mastat_dv, j_racel_dv,j_fimnnet_dv,j_nchild_dv,j_urban_dv,j_gor_dv,j_jbstat,j_sf1,j_scsf1,j_susp,j_strata,j_psu,j_month)
 
 
@@ -229,7 +222,7 @@ k_indresp<-k_indresp%>%dplyr::select(pidp, k_hidp, k_mastat_dv,
          k_age_dv, k_sex_dv, k_hiqual_dv,
 
          k_mastat_dv, k_racel_dv,k_fimnnet_dv,k_nchild_dv,k_urban_dv,k_gor_dv,k_jbstat,k_sf1,k_scsf1,k_susp,k_strata,k_psu)
-=======
+
          k_mastat_dv, k_racel_dv,k_fimnnet_dv,k_nchild_dv,k_urban_dv,k_gor_dv,k_jbstat,k_sf1,k_scsf1,k_susp,k_strata,k_psu,k_month)
 
 
@@ -239,7 +232,7 @@ l_indresp<-l_indresp%>%dplyr::select(pidp, l_hidp, l_mastat_dv,
          l_age_dv, l_sex_dv, l_hiqual_dv,
 
          l_mastat_dv, l_racel_dv,l_fimnnet_dv,l_nchild_dv,l_urban_dv,l_gor_dv,l_jbstat,l_sf1,l_scsf1,l_strata,l_psu)
-=======
+
          l_mastat_dv, l_racel_dv,l_fimnnet_dv,l_nchild_dv,l_urban_dv,l_gor_dv,l_jbstat,l_sf1,l_scsf1,l_strata,l_psu,l_month)
 
 
@@ -250,7 +243,7 @@ m_indresp<-m_indresp%>%dplyr::select(pidp, m_hidp, m_mastat_dv,
          m_age_dv, m_sex_dv, m_hiqual_dv,
 
          m_mastat_dv, m_racel_dv,m_fimnnet_dv,m_nchild_dv,m_urban_dv,m_gor_dv,m_jbstat,m_sf1,m_scsf1,m_strata,m_psu,m_indscui_lw)
-=======
+
          m_mastat_dv, m_racel_dv,m_fimnnet_dv,m_nchild_dv,m_urban_dv,m_gor_dv,m_jbstat,m_sf1,m_scsf1,m_strata,m_psu,m_indscui_lw,m_month)
 
 
@@ -261,11 +254,11 @@ n_indresp<-n_indresp%>%dplyr::select(pidp, n_hidp, n_mastat_dv,
          n_age_dv, n_sex_dv, n_hiqual_dv,
 
          n_mastat_dv, n_racel_dv,n_fimnnet_dv,n_nchild_dv,n_urban_dv,n_gor_dv,n_jbstat,n_sf1,n_scsf1,n_indscui_lw,n_strata,n_psu)
-=======
+
          n_mastat_dv, n_racel_dv,n_fimnnet_dv,n_nchild_dv,n_urban_dv,n_gor_dv,n_jbstat,n_sf1,n_scsf1,n_indscui_lw,n_strata,n_psu,n_month)
 
 
-#egoalt================================================
+#egoalt======
 h_egoalt<-read_dta(file=paste0(inpath, "ukhls/h_egoalt.dta")) 
 
 i_egoalt<-read_dta(file=paste0(inpath, "ukhls/i_egoalt.dta")) 
@@ -280,7 +273,7 @@ m_egoalt<-read_dta(file=paste0(inpath, "ukhls/m_egoalt.dta"))
 
 n_egoalt<-read_dta(file=paste0(inpath, "ukhls/n_egoalt.dta")) 
 
-#hhresp================================================
+#hhresp======
 h_hhresp<-read_dta(file=paste0(inpath, "ukhls/h_hhresp.dta"))  %>%
  dplyr::select(h_hidp,h_tenure_dv,h_ivfho)
 
@@ -302,7 +295,7 @@ m_hhresp<-read_dta(file=paste0(inpath, "ukhls/m_hhresp.dta"))  %>%
 n_hhresp<-read_dta(file=paste0(inpath, "ukhls/n_hhresp.dta"))  %>%
  dplyr::select(n_hidp,n_tenure_dv,n_ivfho)
 
-##emboost(hhsamp)===========================================
+##emboost(hhsamp)=
 h_hhsamp<-read_dta(file=paste0(inpath, "ukhls/h_hhsamp.dta"))  %>%
  dplyr::select(h_hidp,h_emboost)
 i_hhsamp<-read_dta(file=paste0(inpath, "ukhls/i_hhsamp.dta"))  %>%
@@ -695,7 +688,7 @@ a_indresp<-a_indresp%>%dplyr::select(pidp, a_hidp, a_mastat_dv,
          a_age_dv, a_sex_dv, a_hiqual_dv,
 
          a_mastat_dv, a_racel_dv,a_fimnnet_dv,a_nchild_dv,a_urban_dv,a_gor_dv,a_jbstat,a_sf1,a_susp,a_strata,a_psu)
-=======
+
          a_mastat_dv, a_racel_dv,a_fimnnet_dv,a_nchild_dv,a_urban_dv,a_gor_dv,a_jbstat,a_sf1,a_susp,a_strata,a_psu,a_month)
 
 
@@ -956,7 +949,7 @@ b_indresp<-b_indresp%>%dplyr::select(pidp, b_hidp, b_mastat_dv,
          b_age_dv, b_sex_dv, b_hiqual_dv,
 
          b_mastat_dv, b_racel_dv,b_fimnnet_dv,b_nchild_dv,b_urban_dv,b_gor_dv,b_jbstat,b_sf1,b_susp,b_strata,b_psu)
-=======
+
          b_mastat_dv, b_racel_dv,b_fimnnet_dv,b_nchild_dv,b_urban_dv,b_gor_dv,b_jbstat,b_sf1,b_susp,b_strata,b_psu,b_month)
 
 
@@ -1217,7 +1210,7 @@ c_indresp<-c_indresp%>%dplyr::select(pidp, c_hidp, c_mastat_dv,
          c_age_dv, c_sex_dv, c_hiqual_dv,
 
          c_mastat_dv, c_racel_dv,c_fimnnet_dv,c_nchild_dv,c_urban_dv,c_gor_dv,c_jbstat,c_sf1,c_susp,c_strata,c_psu)
-=======
+
          c_mastat_dv, c_racel_dv,c_fimnnet_dv,c_nchild_dv,c_urban_dv,c_gor_dv,c_jbstat,c_sf1,c_susp,c_strata,c_psu,c_month)
 
 
@@ -1478,7 +1471,7 @@ d_indresp<-d_indresp%>%dplyr::select(pidp, d_hidp, d_mastat_dv,
          d_age_dv, d_sex_dv, d_hiqual_dv,
 
          d_mastat_dv, d_racel_dv,d_fimnnet_dv,d_nchild_dv,d_urban_dv,d_gor_dv,d_jbstat,d_sf1,d_scsf1,d_susp,d_strata,d_psu)
-=======
+
          d_mastat_dv, d_racel_dv,d_fimnnet_dv,d_nchild_dv,d_urban_dv,d_gor_dv,d_jbstat,d_sf1,d_scsf1,d_susp,d_strata,d_psu,d_month)
 
 
@@ -1739,7 +1732,7 @@ e_indresp<-e_indresp%>%dplyr::select(pidp, e_hidp, e_mastat_dv,
          e_age_dv, e_sex_dv, e_hiqual_dv,
 
          e_mastat_dv, e_racel_dv,e_fimnnet_dv,e_nchild_dv,e_urban_dv,e_gor_dv,e_jbstat,e_sf1,e_scsf1,e_susp,e_strata,e_psu)
-=======
+
          e_mastat_dv, e_racel_dv,e_fimnnet_dv,e_nchild_dv,e_urban_dv,e_gor_dv,e_jbstat,e_sf1,e_scsf1,e_susp,e_strata,e_psu,e_month)
 
 
@@ -2000,7 +1993,7 @@ f_indresp<-f_indresp%>%dplyr::select(pidp, f_hidp, f_mastat_dv,
          f_age_dv, f_sex_dv, f_hiqual_dv,
 
          f_mastat_dv, f_racel_dv,f_fimnnet_dv,f_nchild_dv,f_urban_dv,f_gor_dv,f_jbstat,f_sf1,f_scsf1,f_susp,f_strata,f_psu,f_indscub_lw)
-=======
+
          f_mastat_dv, f_racel_dv,f_fimnnet_dv,f_nchild_dv,f_urban_dv,f_gor_dv,f_jbstat,f_sf1,f_scsf1,f_susp,f_strata,f_psu,f_indscub_lw,f_month)
 
 
@@ -2261,7 +2254,7 @@ g_indresp<-g_indresp%>%dplyr::select(pidp, g_hidp, g_mastat_dv,
          g_age_dv, g_sex_dv, g_hiqual_dv,
 
          g_mastat_dv, g_racel_dv,g_fimnnet_dv,g_nchild_dv,g_urban_dv,g_gor_dv,g_jbstat,g_sf1,g_susp,g_strata,g_psu,g_indscui_lw)
-=======
+
          g_mastat_dv, g_racel_dv,g_fimnnet_dv,g_nchild_dv,g_urban_dv,g_gor_dv,g_jbstat,g_sf1,g_susp,g_strata,g_psu,g_indscui_lw,g_month)
 
 
@@ -2526,7 +2519,7 @@ h_indresp<-h_indresp%>%dplyr::select(pidp, h_hidp, h_mastat_dv,
          h_age_dv, h_sex_dv, h_hiqual_dv,
 
          h_mastat_dv, h_racel_dv,h_fimnnet_dv,h_nchild_dv,h_urban_dv,h_gor_dv,h_jbstat,h_sf1,h_scsf1,h_susp,h_strata,h_psu)
-=======
+
          h_mastat_dv, h_racel_dv,h_fimnnet_dv,h_nchild_dv,h_urban_dv,h_gor_dv,h_jbstat,h_sf1,h_scsf1,h_susp,h_strata,h_psu,h_month)
 
 
@@ -2795,7 +2788,7 @@ i_indresp<-i_indresp%>%dplyr::select(pidp, i_hidp, i_mastat_dv,
          i_age_dv, i_sex_dv, i_hiqual_dv,
 
          i_mastat_dv, i_racel_dv,i_fimnnet_dv,i_nchild_dv,i_urban_dv,i_gor_dv,i_jbstat,i_sf1,i_scsf1,i_susp,i_strata,i_psu)
-=======
+
          i_mastat_dv, i_racel_dv,i_fimnnet_dv,i_nchild_dv,i_urban_dv,i_gor_dv,i_jbstat,i_sf1,i_scsf1,i_susp,i_strata,i_psu,i_month)
 
 
@@ -3061,7 +3054,7 @@ j_indresp<-j_indresp%>%dplyr::select(pidp, j_hidp, j_mastat_dv,
          j_age_dv, j_sex_dv, j_hiqual_dv,
 
          j_mastat_dv, j_racel_dv,j_fimnnet_dv,j_nchild_dv,j_urban_dv,j_gor_dv,j_jbstat,j_sf1,j_scsf1,j_susp,j_strata,j_psu)
-=======
+
          j_mastat_dv, j_racel_dv,j_fimnnet_dv,j_nchild_dv,j_urban_dv,j_gor_dv,j_jbstat,j_sf1,j_scsf1,j_susp,j_strata,j_psu,j_month)
 
 
@@ -3326,7 +3319,7 @@ k_indresp<-k_indresp%>%dplyr::select(pidp, k_hidp, k_mastat_dv,
          k_age_dv, k_sex_dv, k_hiqual_dv,
 
          k_mastat_dv, k_racel_dv,k_fimnnet_dv,k_nchild_dv,k_urban_dv,k_gor_dv,k_jbstat,k_sf1,k_scsf1,k_susp,k_strata,k_psu)
-=======
+
          k_mastat_dv, k_racel_dv,k_fimnnet_dv,k_nchild_dv,k_urban_dv,k_gor_dv,k_jbstat,k_sf1,k_scsf1,k_susp,k_strata,k_psu,k_month)
 
 
@@ -3594,7 +3587,7 @@ l_indresp<-l_indresp%>%dplyr::select(pidp, l_hidp, l_mastat_dv,
          l_age_dv, l_sex_dv, l_hiqual_dv,
 
          l_mastat_dv, l_racel_dv,l_fimnnet_dv,l_nchild_dv,l_urban_dv,l_gor_dv,l_jbstat,l_sf1,l_scsf1,l_strata,l_psu)
-=======
+
          l_mastat_dv, l_racel_dv,l_fimnnet_dv,l_nchild_dv,l_urban_dv,l_gor_dv,l_jbstat,l_sf1,l_scsf1,l_strata,l_psu,l_month)
 
 
@@ -3859,7 +3852,7 @@ m_indresp<-m_indresp%>%dplyr::select(pidp, m_hidp, m_mastat_dv,
          m_age_dv, m_sex_dv, m_hiqual_dv,
 
          m_mastat_dv, m_racel_dv,m_fimnnet_dv,m_nchild_dv,m_urban_dv,m_gor_dv,m_jbstat,m_sf1,m_scsf1,m_strata,m_psu,m_indscui_lw)
-=======
+
          m_mastat_dv, m_racel_dv,m_fimnnet_dv,m_nchild_dv,m_urban_dv,m_gor_dv,m_jbstat,m_sf1,m_scsf1,m_strata,m_psu,m_indscui_lw,m_month)
 
 
@@ -3969,7 +3962,7 @@ indresp<-indresp[which(indresp$age_dv%in%c(16:30)),]
 
 ```{r}
 
-=======
+
 #cross wave identifiers
 indresp$wave<-c(0)
 indresp$wave[indresp$from_wave_a==1]<-1
@@ -4056,7 +4049,7 @@ indresp<-indresp%>%group_by(pidp)%>%tidyr::fill(iemb,.direction="updown")
 test1<-indresp
 test2<-indrespa
 test3<-indrespb
-=======
+
 test1<-indresp
 
 
@@ -4080,7 +4073,7 @@ indrespb<-indrespb[which(!is.na(indrespb$m_indscui_lw)),]
 
 #all the cases in which weighting==NA are removed
 
-=======
+
   select(pidp,i_indscui_lw) %>% full_join(test1, by="pidp")
 indrespa$i_indscui_lw[indrespa$i_indscui_lw<0]<-NA
 indrespa<-indrespa[which(!is.na(indrespa$i_indscui_lw)),]
@@ -4113,7 +4106,7 @@ rm(a_hhresp, b_hhresp, c_hhresp, d_hhresp, e_hhresp, f_hhresp, g_hhresp, h_hhres
 rm(a_hhsamp, b_hhsamp, c_hhsamp, d_hhsamp, e_hhsamp, f_hhsamp, g_hhsamp, h_hhsamp, i_hhsamp, j_hhsamp, k_hhsamp, l_hhsamp, m_hhsamp, n_hhsamp )
 rm(a_indrespp, b_indrespp, c_indrespp, d_indrespp, e_indrespp, f_indrespp, 
    h_indrespp, i_indrespp, j_indrespp, k_indrespp, l_indrespp, m_indrespp )
-=======
+
 #rm (a_egoalt, b_egoalt, c_egoalt, d_egoalt, e_egoalt, f_egoalt, g_egoalt, h_egoalt, i_egoalt, j_egoalt, k_egoalt, l_egoalt, m_egoalt, n_egoalt )
 #rm(a_hhresp, b_hhresp, c_hhresp, d_hhresp, e_hhresp, f_hhresp, g_hhresp, h_hhresp, i_hhresp, j_hhresp, k_hhresp, l_hhresp, m_hhresp, n_hhresp)
 #rm(a_hhsamp, b_hhsamp, c_hhsamp, d_hhsamp, e_hhsamp, f_hhsamp, g_hhsamp, h_hhsamp, i_hhsamp, j_hhsamp, k_hhsamp, l_hhsamp, m_hhsamp, n_hhsamp )
@@ -4238,7 +4231,7 @@ indrespa$large_hh[indrespa$relativenum>=2]<-1
 indrespa$large_hh<-factor(indrespa$large_hh,levels=c(0,1),labels=c("small hh","large hh"))
 ```
 
-======= Covid interval
+Covid interval
 
 ```{r}
 #wave jklm 
@@ -4476,7 +4469,7 @@ indrespb$large_hh<-factor(indrespb$large_hh,levels=c(0,1),labels=c("small hh","l
 
 ```
 
-======= parental level
+parental level
 
 ```{r}
 #level of education completed
@@ -4882,7 +4875,7 @@ indrespb$wave[indrespb$from_wave_m==1]<-13
 
 indrespb$wave<-factor(indrespb$wave,levels=c(8,9,10,11,12,13),labels=c("wave 8","wave 9","wave 10","wave 11","wave 12",'wave 13'))
 
-=======
+
 # interaction variables
 
 indresp$race2<-c(0)
@@ -5381,7 +5374,7 @@ indrespb<-join_all(list(indrespb,out), by=c("pidp", "wave"), type='left')
 
 ```{r}
 #mar
-=======
+
 ```
 
 ```{r}
@@ -5435,7 +5428,7 @@ indrespb$studentleave[indrespb$out==3]<-1
 #other
 indrespb$other<-c(0)
 indrespb$other[indrespb$out==0]<-1
-=======
+
 
 ```
 
@@ -5580,7 +5573,7 @@ test<-counts[which(counts$separate==1),]
 table(test$n)
 
 17/7421
-=======
+
 indrespfy<-subset(svy_indresp, sex==1)
 indrespmy<-subset(svy_indresp, sex==0)
 
@@ -5656,7 +5649,6 @@ p2<-huxtablereg(lapply(list(all_am,all_bm), convertModel))
 p3<-huxtablereg(lapply(list(cohab_a,cohab_b), convertModel))
 p4<-huxtablereg(lapply(list(mar_a,mar_b), convertModel))
 p5<-huxtablereg(lapply(list(all_a,all_b), convertModel))
-=======
 p1<-huxtablereg(lapply(list(cohab_f,cohab_m), convertModel))
 p2<-huxtablereg(lapply(list(mar_f,mar_m), convertModel))
 p3<-huxtablereg(lapply(list(student_f,student_m), convertModel))
